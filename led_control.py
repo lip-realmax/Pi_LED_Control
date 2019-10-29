@@ -7,11 +7,11 @@ parser.add_argument("-s", dest="state", help="State of the LED(on/off). Default:
 
 args = parser.parse_args()
 
-led = LED(14)       //The GPIO port 14
+led = LED(14)       #The GPIO port 14
 
 if "on" == args.state :
   led.on()
-else if "off" == args.state :
+elif "off" == args.state :
   led.off()
-else
+else :
   print("Invalid input: " + args.state)
